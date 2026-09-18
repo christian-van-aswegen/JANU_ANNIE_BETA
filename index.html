@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piet & Jan's Wedding Invitation</title>
+    <title>Janu & Anneke's Wedding Invitation</title>
     <style>
         /* --- Base & Mobile Frame Styling --- */
         body {
@@ -12,8 +12,8 @@
             font-family: 'Georgia', serif;
             color: #55443d;
             /* Background image that stays fixed */
-            background-image: url('Waterval - hoof foto.jpeg');
-            background-size: cover;
+            background-image: url('Agtergrond Foto.jpeg');
+            background-size: 100%;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -48,7 +48,7 @@
 
         /* --- Hero Header --- */
         .hero {
-            background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552');
+            background-image: url('Waterval - hoof foto.jpeg');
             background-size: cover;
             background-position: center;
             height: 340px;
@@ -149,9 +149,35 @@
             transition: background 0.3s;
         }
 
+        .section-img {
+            width: 100%;             /* Fills the section width nicely */
+            max-height: 150px;       /* Change this from 220px to a smaller pixel size (e.g., 120px or 150px) */
+            object-fit: cover;       /* Crops the image gracefully to fit the box */
+            border-radius: 12px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .section-img-longer {
+            width: 100%;             /* Fills the section width nicely */
+            /* max-height: 150px;       Change this from 220px to a smaller pixel size (e.g., 120px or 150px) */
+            object-fit: cover;       /* Crops the image gracefully to fit the box */
+            border-radius: 12px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
         .btn:hover {
             background-color: #52443d;
         }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #66554d;
+            text-align: justify; /* <-- Add this line here */
+        }
+
     </style>
     <!-- Google Font for names script style -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
@@ -164,9 +190,9 @@
             <!-- Hero Header -->
             <div class="hero">
                 <div class="hero-overlay">
-                    <div class="subtitle">We're Getting Married</div>
-                    <h1>Piet & Jan</h1>
-                    <div class="date">29 . 11 . 2026</div>
+                    <!-- <div class="subtitle">We're Getting Married</div> -->
+                    <h1>Janu & Anneke</h1>
+                    <div class="date">30 . 01 . 2027</div>
                 </div>
             </div>
 
@@ -174,33 +200,87 @@
             <div class="section">
                 <h2>Countdown</h2>
                 <div class="countdown">
-                    <div class="countdown-box">246 <span>DAYS</span></div>
-                    <div class="countdown-box">11 <span>HOURS</span></div>
-                    <div class="countdown-box">53 <span>MINS</span></div>
-                    <div class="countdown-box">06 <span>SECS</span></div>
+                    <div class="countdown-box"><span id="days">00</span> <span>DAYS</span></div>
+                    <div class="countdown-box"><span id="hours">00</span> <span>HOURS</span></div>
+                    <div class="countdown-box"><span id="minutes">00</span> <span>MINS</span></div>
+                    <div class="countdown-box"><span id="seconds">00</span> <span>SECS</span></div>
                 </div>
             </div>
 
-            <!-- Ceremony Section -->
+            <!-- Plan Section -->
             <div class="section">
-                <h2>Ceremony</h2>
-                <p>16:00 PM<br>
-                <strong>Santa Maria Chapel</strong><br>
-                Ronda, Málaga</p>
-                <a href="#" class="btn">View Details</a>
+                <!-- <h2>Reception</h2> -->
+                <!-- <p>18:30 PM<br> -->
+                <!-- <strong>Finca La Concepción</strong><br> -->
+                <!-- Marbella, Málaga</p> -->
+                <!-- <img src="Verloof_foto.jpeg" alt="Engagement Photo" class="section-img"> -->
+                
+                <!-- <a href="#" class="btn">View Details</a> -->
+                <img src="Plan.jpeg", alt="Plan", class="section-img-longer">
             </div>
 
-            <!-- Reception Section -->
+            <!-- Verloof Foto Section -->
             <div class="section">
-                <h2>Reception</h2>
-                <p>18:30 PM<br>
-                <strong>Finca La Concepción</strong><br>
-                Marbella, Málaga</p>
-                <a href="#" class="btn">View Details</a>
+                <h2>Our Engagement</h2>
+                <!-- Replace 'your-photo.jpeg' with your actual photo file name or URL -->
+                <img src="Verloof_foto.jpeg" alt="Engagement Photo" class="section-img">
+                <!-- <p>Some special memories together before the big day.</p> -->
+            </div>
+
+            <!-- Dress Code Section -->
+            <div class="section">
+                <h2>Dress code</h2>
+                <!-- Replace 'your-photo.jpeg' with your actual photo file name or URL -->
+                <img src="Kleredrag_foto-removebg-preview.png" alt="Dress code photo" class="section-img-longer">
+                <p>Vrouens: Pastel kleurvolle rokke</p>
+                <p>Mans: Chinos en kraaghemde</p>
+            </div>
+
+            <!-- RSVP Section -->
+            <div class="section">
+                <h2>RSVP - 01.12.2026</h2>
+                <a href="https://docs.google.com/forms/d/1zQnu0cqHj9pmGxkYSC50ZDNcUfK_jjz87T4SAoy5JRU/edit" target="_blank" class="btn">RSVP Here</a>
+            </div>
+
+            <!-- Gift Section -->
+            <div class="section">
+                <!-- <h2>Gift</h2> -->
+                <!-- Replace 'your-photo.jpeg' with your actual photo file name or URL -->
+                <img src="Geskenk.png" alt="Gift Photo" class="section-img">
+                <p>Julle teenwoordigheid is reeds vir ons 'n geskenk. Indien julle iets wil gee kan julle die volgende rekening gebruik: </p>
+                    <!-- Your mere presence means the world to us. If you want to give a gift, you can use the following bank account: </p> -->
             </div>
 
         </div>
     </div>
 
+    <!-- Live Countdown Script -->
+    <script>
+        // Set the date we are counting down to: January 30, 2027 at 00:00:00
+        const weddingDate = new Date("Jan 30, 2027 00:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the results to the HTML elements
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+            // If the countdown is over, display text
+            if (distance < 0) {
+                clearInterval(timer);
+                document.querySelector(".countdown").innerHTML = "The Wedding Day is Here!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
