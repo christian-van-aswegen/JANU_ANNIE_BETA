@@ -108,6 +108,15 @@
             margin-bottom: 12px;
         }
 
+        h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #d0af9d;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
         p {
             font-size: 0.9rem;
             line-height: 1.4;
@@ -179,6 +188,87 @@
             text-align: justify; /* <-- Add this line here */
         }
 
+        /* Venue section */
+        .venue-section {
+        font-family: 'Playfair Display', Georgia, serif;
+        background-color: #faf8f5;
+        color: #333333;
+        padding: 60px 20px;
+        text-align: center;
+        }
+
+        .venue-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eae5dd;
+        }
+
+        .venue-subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #8c7b6c;
+        margin-bottom: 10px;
+        }
+
+        .venue-title {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #2c2c2c;
+        }
+
+        .venue-address {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #666666;
+        margin-bottom: 25px;
+        }
+
+        .venue-coordinates {
+        font-family: monospace;
+        font-size: 0.9rem;
+        color: #888888;
+        margin-bottom: 30px;
+        }
+
+        /* Map Link Button */
+        .btn-maps {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: #8c7b6c;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 14px 28px;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-maps:hover {
+        background-color: #726356;
+        transform: translateY(-2px);
+        }
+
+        .btn-maps svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+        }
+
     </style>
     <!-- Google Font for names script style -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
@@ -207,6 +297,35 @@
                     <div class="countdown-box"><span id="seconds">00</span> <span>SECS</span></div>
                 </div>
             </div>
+
+            <div class="venue-container">
+                <div class="venue-subtitle">Celebration Venue</div>
+                <h2 class="venue-title">Toadbury Hall</h2>
+                
+                <p class="venue-address">
+                    Plot 64 Beyers Naude Ext, Lanseria<br>
+                    Krugersdorp, South Africa
+                </p>
+
+                <p class="venue-coordinates">
+                    GPS: 25.9491° S, 27.8794° E
+                </p>
+
+                <!-- Google Maps Link using GPS Coordinates -->
+                <a 
+                    href="https://www.google.com/maps/search/?api=1&query=toadbury%20hall%20hotel%20and%20restaurants" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="btn-maps"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Open in Google Maps
+                </a>
+                </div>
+
+
 
             <!-- Plan Section -->
             <div class="section">
